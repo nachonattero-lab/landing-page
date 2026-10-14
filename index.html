@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexo Studio — Ingeniería digital</title>
+  <meta name="description" content="Diseñamos y desarrollamos productos digitales a medida: rápidos, fluidos y memorables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__logo">N<span>/</span>S</span>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <span class="loader__count" id="loaderCount">0</span>
+    </div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="noise"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" data-magnetic>
+      <span class="logo-mark"></span>
+      Nexo<span class="muted">Studio</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajo">Trabajo</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#stack">Stack</a>
+    </nav>
+    <a href="#contacto" class="btn btn--small" data-magnetic><span>Hablemos</span></a>
+    <button class="nav__burger" id="burger" aria-label="Menú"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#trabajo">Trabajo</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <canvas id="particles" class="hero__canvas"></canvas>
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+      <div class="grid-bg"></div>
+
+      <div class="hero__content container">
+        <div class="pill reveal">
+          <span class="pill__dot"></span>
+          Disponibles para nuevos proyectos
+        </div>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Código</span> <span class="word">que</span> <span class="word">se</span></span>
+          <span class="line"><span class="word gradient-text">siente</span> <span class="word gradient-text">del</span> <span class="word gradient-text">futuro.</span></span>
+        </h1>
+        <p class="hero__sub reveal">
+          Somos un estudio de dos ingenieros obsesionados con el detalle. Diseñamos y construimos
+          webs, apps y plataformas a medida que cargan al instante y se mueven a 60&nbsp;fps.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#trabajo" class="btn" data-magnetic><span>Ver lo que hacemos</span><i class="arrow">→</i></a>
+          <a href="#proceso" class="btn btn--ghost" data-magnetic><span>Cómo trabajamos</span></a>
+        </div>
+      </div>
+
+      <div class="hero__code reveal" data-tilt>
+        <div class="window">
+          <div class="window__bar">
+            <span></span><span></span><span></span>
+            <em>nexo.config.ts</em>
+          </div>
+          <pre class="window__body"><code id="typed"></code><span class="caret"></span></pre>
+        </div>
+      </div>
+
+      <a href="#servicios" class="scroll-hint">
+        <span class="scroll-hint__mouse"><span></span></span>
+        Scroll
+      </a>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee" id="stack" aria-label="Tecnologías">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>React</span><b>✦</b><span>Next.js</span><b>✦</b><span>TypeScript</span><b>✦</b><span>Node.js</span><b>✦</b><span>Three.js</span><b>✦</b><span>PostgreSQL</span><b>✦</b><span>Tailwind</span><b>✦</b><span>Python</span><b>✦</b><span>AWS</span><b>✦</b><span>Figma</span><b>✦</b>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>React</span><b>✦</b><span>Next.js</span><b>✦</b><span>TypeScript</span><b>✦</b><span>Node.js</span><b>✦</b><span>Three.js</span><b>✦</b><span>PostgreSQL</span><b>✦</b><span>Tailwind</span><b>✦</b><span>Python</span><b>✦</b><span>AWS</span><b>✦</b><span>Figma</span><b>✦</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section container" id="servicios">
+      <div class="section__head">
+        <span class="eyebrow reveal">01 — Servicios</span>
+        <h2 class="section__title reveal">Todo lo que tu producto<br />necesita, <span class="gradient-text">bajo un mismo techo.</span></h2>
+      </div>
+
+      <div class="bento">
+        <article class="card card--lg reveal" data-spotlight data-tilt>
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg>
+          </div>
+          <h3>Desarrollo web a medida</h3>
+          <p>Sitios y aplicaciones construidos desde cero, sin plantillas. Rendimiento, SEO y accesibilidad desde la primera línea.</p>
+          <div class="perf">
+            <div class="perf__ring" data-score="100"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9"/><circle class="perf__fill" cx="18" cy="18" r="15.9"/></svg><span>0</span><em>Rendimiento</em></div>
+            <div class="perf__ring" data-score="100"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9"/><circle class="perf__fill" cx="18" cy="18" r="15.9"/></svg><span>0</span><em>Accesibilidad</em></div>
+            <div class="perf__ring" data-score="100"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9"/><circle class="perf__fill" cx="18" cy="18" r="15.9"/></svg><span>0</span><em>SEO</em></div>
+          </div>
+        </article>
+
+        <article class="card reveal" data-spotlight data-tilt>
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3>Apps móviles</h3>
+          <p>Experiencias nativas para iOS y Android con una sola base de código.</p>
+        </article>
+
+        <article class="card reveal" data-spotlight data-tilt>
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+          </div>
+          <h3>Diseño UI / UX</h3>
+          <p>Interfaces que se entienden sin manual y se recuerdan después de cerrarlas.</p>
+        </article>
+
+        <article class="card reveal" data-spotlight data-tilt>
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+          </div>
+          <h3>Backend &amp; APIs</h3>
+          <p>Arquitecturas escalables, seguras y documentadas. Bases de datos que no se caen el día del lanzamiento.</p>
+        </article>
+
+        <article class="card card--wide reveal" data-spotlight data-tilt>
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div>
+            <h3>Automatización e IA</h3>
+            <p>Integramos modelos de lenguaje, chatbots y flujos automáticos que le ahorran horas a tu equipo cada semana.</p>
+          </div>
+          <div class="chat">
+            <div class="chat__msg chat__msg--user">¿Cuántos pedidos entraron hoy?</div>
+            <div class="chat__msg chat__msg--bot"><span class="typing"><i></i><i></i><i></i></span><span class="chat__answer">142 pedidos · +18% vs. ayer 📈</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats container">
+      <div class="stat reveal"><strong data-count="60">0</strong><span>fps en cada animación</span></div>
+      <div class="stat reveal"><strong data-count="100" data-suffix="%">0</strong><span>código propio, cero plantillas</span></div>
+      <div class="stat reveal"><strong data-count="1" data-prefix="&lt;" data-suffix="s">0</strong><span>tiempo de carga objetivo</span></div>
+      <div class="stat reveal"><strong data-count="2">0</strong><span>mentes, un solo equipo</span></div>
+    </section>
+
+    <!-- Trabajo -->
+    <section class="work" id="trabajo">
+      <div class="work__sticky">
+        <div class="container work__head">
+          <span class="eyebrow">02 — Lo que podemos construir</span>
+          <h2 class="section__title">Conceptos que <span class="gradient-text">cobran vida.</span></h2>
+        </div>
+        <div class="work__track" id="workTrack">
+          <article class="project" data-spotlight>
+            <div class="project__visual project__visual--1">
+              <div class="mock mock--dash">
+                <div class="mock__side"><i></i><i></i><i></i><i></i></div>
+                <div class="mock__main">
+                  <div class="mock__kpis"><b></b><b></b><b></b></div>
+                  <div class="mock__chart">
+                    <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:50%"></span><span style="--h:80%"></span><span style="--h:60%"></span><span style="--h:95%"></span><span style="--h:75%"></span><span style="--h:88%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__info">
+              <span class="tag">SaaS · Dashboard</span>
+              <h3>Panel de analítica en tiempo real</h3>
+              <p>Métricas en vivo, gráficos interactivos y alertas inteligentes.</p>
+            </div>
+          </article>
+
+          <article class="project" data-spotlight>
+            <div class="project__visual project__visual--2">
+              <div class="mock mock--shop">
+                <div class="mock__product"><div class="mock__img"></div><i></i><i class="short"></i></div>
+                <div class="mock__product"><div class="mock__img"></div><i></i><i class="short"></i></div>
+                <div class="mock__product"><div class="mock__img"></div><i></i><i class="short"></i></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <span class="tag">E-commerce</span>
+              <h3>Tienda online de alto rendimiento</h3>
+              <p>Checkout en un clic, catálogo instantáneo y pagos integrados.</p>
+            </div>
+          </article>
+
+          <article class="project" data-spotlight>
+            <div class="project__visual project__visual--3">
+              <div class="mock mock--phone">
+                <div class="phone">
+                  <div class="phone__notch"></div>
+                  <div class="phone__card"></div>
+                  <div class="phone__row"></div><div class="phone__row"></div><div class="phone__row short"></div>
+                  <div class="phone__btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project__info">
+              <span class="tag">App móvil · Fintech</span>
+              <h3>Billetera digital</h3>
+              <p>Transferencias, ahorro y reportes en una interfaz que da gusto usar.</p>
+            </div>
+          </article>
+
+          <article class="project" data-spotlight>
+            <div class="project__visual project__visual--4">
+              <div class="mock mock--ai">
+                <div class="ai-core"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <span class="tag">IA · Automatización</span>
+              <h3>Asistente inteligente para equipos</h3>
+              <p>Responde, resume y automatiza tareas conectado a tus herramientas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section container" id="proceso">
+      <div class="section__head">
+        <span class="eyebrow reveal">03 — Proceso</span>
+        <h2 class="section__title reveal">De la idea al lanzamiento,<br /><span class="gradient-text">sin sorpresas.</span></h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="timeline__line"><span id="timelineFill"></span></div>
+        <div class="step reveal">
+          <span class="step__num">01</span>
+          <div><h3>Descubrimiento</h3><p>Entendemos tu negocio, tus usuarios y tus objetivos antes de escribir una sola línea.</p></div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">02</span>
+          <div><h3>Diseño</h3><p>Prototipos interactivos que puedes tocar y validar desde la primera semana.</p></div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">03</span>
+          <div><h3>Desarrollo</h3><p>Sprints cortos, entregas constantes y un entorno de pruebas siempre actualizado.</p></div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">04</span>
+          <div><h3>Lanzamiento y evolución</h3><p>Publicamos, medimos y seguimos mejorando contigo. No desaparecemos tras el deploy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="section container">
+      <div class="values">
+        <div class="value reveal" data-spotlight>
+          <span class="value__k">⚡</span>
+          <h3>Velocidad obsesiva</h3>
+          <p>Cada kilobyte cuenta. Optimizamos hasta que la página se siente instantánea.</p>
+        </div>
+        <div class="value reveal" data-spotlight>
+          <span class="value__k">◎</span>
+          <h3>Detalle en todo</h3>
+          <p>Las microinteracciones son las que hacen que un producto se sienta premium.</p>
+        </div>
+        <div class="value reveal" data-spotlight>
+          <span class="value__k">⇄</span>
+          <h3>Trato directo</h3>
+          <p>Hablas con quienes construyen tu producto. Sin intermediarios ni teléfono roto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contacto">
+      <div class="orb orb--cta"></div>
+      <div class="container cta__inner">
+        <span class="eyebrow reveal">04 — Contacto</span>
+        <h2 class="cta__title">
+          <span class="line"><span class="word">¿Tienes</span> <span class="word">una</span> <span class="word">idea?</span></span>
+          <span class="line"><span class="word gradient-text">Hagámosla</span> <span class="word gradient-text">realidad.</span></span>
+        </h2>
+        <a href="#top" class="btn btn--xl" data-magnetic><span>Empecemos un proyecto</span><i class="arrow">→</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span class="nav__logo"><span class="logo-mark"></span>Nexo<span class="muted">Studio</span></span>
+    <span class="muted">© <span id="year"></span> Nexo Studio. Hecho a mano, línea por línea.</span>
+    <span class="footer__status"><span class="pill__dot"></span>Todos los sistemas operativos</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
