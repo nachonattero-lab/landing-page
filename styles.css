@@ -10,6 +10,10 @@
   --accent-2: #00d4ff;
   --accent-3: #ff4ecd;
   --grad: linear-gradient(120deg, var(--accent-1), var(--accent-2) 50%, var(--accent-3));
+  --green-1: #00c853;
+  --green-2: #3dffa2;
+  --green-3: #9cff57;
+  --grad-green: linear-gradient(120deg, var(--green-1), var(--green-2) 25%, var(--green-3) 50%, var(--green-2) 75%, var(--green-1));
   --radius: 24px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --font-display: "Space Grotesk", system-ui, sans-serif;
@@ -40,7 +44,7 @@ a { color: inherit; text-decoration: none; }
 .muted { color: var(--muted); }
 
 .gradient-text {
-  background: var(--grad);
+  background: var(--grad-green);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -60,7 +64,7 @@ a { color: inherit; text-decoration: none; }
 .loader.is-done { clip-path: inset(0 0 100% 0); }
 .loader__inner { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .loader__logo { font-family: var(--font-display); font-size: 42px; font-weight: 700; letter-spacing: -0.04em; }
-.loader__logo span { color: var(--accent-2); }
+.loader__logo span { color: var(--green-2); }
 .loader__bar { width: 180px; height: 2px; background: var(--border); border-radius: 2px; overflow: hidden; }
 .loader__bar span { display: block; height: 100%; width: 0; background: var(--grad); }
 .loader__count { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
@@ -111,7 +115,7 @@ a { color: inherit; text-decoration: none; }
 .nav__logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: -0.02em; }
 .nav__logo .muted { font-weight: 400; }
 .logo-mark {
-  width: 22px; height: 22px; border-radius: 7px; background: var(--grad);
+  width: 22px; height: 22px; border-radius: 7px; background: var(--grad-green);
   position: relative; animation: spin 8s linear infinite;
 }
 .logo-mark::after { content: ""; position: absolute; inset: 5px; border-radius: 3px; background: var(--bg); }
