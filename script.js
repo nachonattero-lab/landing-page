@@ -80,7 +80,7 @@
     ['', '  fps: '], ['tk-n', '60'], ['', ',\n'],
     ['', '  escalable: '], ['tk-k', 'true'], ['', ',\n'],
     ['', '  stack: ['], ['tk-s', '"react"'], ['', ', '], ['tk-s', '"node"'], ['', ', '], ['tk-s', '"ia"'], ['', '],\n'],
-    ['', '  equipo: '], ['tk-s', '"Nexo Studio"'], ['', ',\n'],
+    ['', '  equipo: '], ['tk-s', '"Cottez Studio"'], ['', ',\n'],
     ['', '};\n\n'],
     ['tk-k', 'await '], ['tk-p', 'lanzar'], ['', '(proyecto); '], ['tk-c', '// 🚀'],
   ];
